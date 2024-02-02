@@ -12,7 +12,7 @@ export function Menu(){
                 <a className="nav-link active" aria-current="page" href="/">Usuarios</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/Productos">Productos</a>
+                <a className="nav-link active" aria-current="page" href="/productos">Productos</a>
                 </li>
             </ul>
             <form className="d-flex" role="search">
