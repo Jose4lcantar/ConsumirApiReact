@@ -18,8 +18,8 @@ export function Inicio (){
     },[]);
 
     const ListaUsuarios=dataUsuarios.map((usuario)=>{
-        var editar="/editar/"+usuario.id;
-        var borrar="/borrar/"+usuario.id;
+        var editar="/EditarUsuario/"+usuario.id;
+        var borrar="/BorrarUsuario/"+usuario.id;
         var foto="http://localhost:3000/images/"+usuario.foto;
         return(
             <tr className="aling-middle">

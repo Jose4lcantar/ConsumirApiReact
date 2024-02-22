@@ -1,30 +1,29 @@
 import axios from "axios";
 import { useState } from "react";
 
-export function Nuevo (){
+export function NuevoProducto (){
     const [nombre, setNombre] = useState("");
-    const [usuario, setUsuario] = useState("");
-    const [password, setPassword] = useState("");
-    const [foto, setFoto] = useState(null);
+    const [descripcion, setDescripcion] = useState("");
+    const [precio, setPrecio] = useState("");
+    const [fotoProd, setFotoProd] = useState(null);
     const [mensaje, setMensaje] = useState("");
     async function guardarDatos(e){
         e.preventDefault();
         const formData = new FormData();
         console.log(nombre);
         formData.append("nombre", nombre);
-        formData.append("usuario", usuario);
-        formData.append("password", password);
-        formData.append("foto", foto);
-        const res= await axios.post("http://localhost:3000/api/nuevousuario", formData, {
+        formData.append("descripcion", descripcion);
+        formData.append("precio", precio);
+        formData.append("fotoProd", fotoProd);
+        const res= await axios.post("http://localhost:3000/api/nuevoproducto", formData, {
             headers:{
                 "Content-Type": "multipar/form-data"
             }
         });
         console.log(res);
         setNombre("");
-        setUsuario("");
-        setPassword("");
-        setFoto(null);
+        setDescripcion("");
+        setFotoProd(null);
         setMensaje(res.data);
         setTimeout(()=>{
             setMensaje("");
@@ -36,16 +35,16 @@ export function Nuevo (){
         <form onSubmit={guardarDatos}>
         <div className="card">
             <div className="card-header">
-                <h1>Nuevo Usuario</h1>
+                <h1>Nuevo Producto</h1>
             </div>
             <div className="card-body">
                 <input className="form-control mb-3" type="text" placeholder="Nombre" value={nombre} name="nombre" id="nombre" onChange={(e)=>setNombre(e.target.value)} autoFocus/>
-                <input className="form-control mb-3" type="text" placeholder="Usuario" value={usuario} name="usuario" id="usuario" onChange={(e)=>setUsuario(e.target.value)} />
-                <input className="form-control mb-3" type="text" placeholder="Password" value={password} name="password" id="password" onChange={(e)=>setPassword(e.target.value)} />
-                <input className="form-control mb-3" type="file" placeholder="Foto" name="foto" id="foto" onChange={(e)=>setFoto(e.target.files[0])}/>
+                <input className="form-control mb-3" type="text" placeholder="Descripcion" value={descripcion} name="descripcion" id="descripcion" onChange={(e)=>setDescripcion(e.target.value)} />
+                <input className="form-control mb-3" type="text" placeholder="Precio" value={precio} name="precio" id="precio" onChange={(e)=>setPrecio(e.target.value)} />
+                <input className="form-control mb-3" type="file" placeholder="FotoProd" name="fotoProd" id="fotoProd" onChange={(e)=>setFotoProd(e.target.files[0])}/>
             </div>
             <div className="card-footer">
-                <button className="form-control btn btn-primary" type="submit">Guardar usuario</button>
+                <button className="form-control btn btn-primary" type="submit">Guardar producto</button>
             </div>
         </div>
         </form>
