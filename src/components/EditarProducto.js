@@ -56,6 +56,10 @@ export function EditarProducto(){
             precio, 
         }
         console.log(datos);
+<<<<<<< HEAD
+=======
+        window.location.href = "http://localhost:3001/productos";
+>>>>>>> 3a8126f0a72466715450b700876f716524822577
     }
 
     return(

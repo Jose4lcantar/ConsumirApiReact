@@ -59,6 +59,10 @@ export function EditarUsuario(){
             usuario,
         }
         console.log(datos);
+<<<<<<< HEAD
+=======
+        window.location.href = "http://localhost:3001";
+>>>>>>> 3a8126f0a72466715450b700876f716524822577
     }
     return(
         <div className="container mt-5">
