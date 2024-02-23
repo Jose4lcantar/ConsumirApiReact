@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-export function Productos (){
+export function Productos(){
     const [dataProductos, setDataProductos] = useState ([]);
 
     useEffect(()=>{
@@ -19,8 +19,8 @@ export function Productos (){
     },[]);
 
     const ListaProductos=dataProductos.map((producto)=>{
-        var editar="/editar/"+producto.id;
-        var borrar="/borrar/"+producto.id;
+        var editar="/EditarProducto/"+producto.id;
+        var borrar="/BorrarProducto/"+producto.id;
         var fotoProd="http://localhost:3000/imagesProd/"+producto.fotoProd;
         return(
             <tr className="aling-middle">
