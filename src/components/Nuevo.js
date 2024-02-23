@@ -29,6 +29,7 @@ export function Nuevo (){
         setTimeout(()=>{
             setMensaje("");
         }, 3000);
+        window.location.href = "http://localhost:3001";
     }
     return(
     <div className="container mt-5">

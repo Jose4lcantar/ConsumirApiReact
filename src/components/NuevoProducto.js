@@ -28,6 +28,7 @@ export function NuevoProducto (){
         setTimeout(()=>{
             setMensaje("");
         }, 3000);
+        window.location.href = "http://localhost:3001/productos";
     }
     return(
     <div className="container mt-5">

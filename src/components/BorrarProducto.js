@@ -10,6 +10,7 @@ export function BorrarProducto(){
             const res= await axios.get(`http://localhost:3000/api/borrarProducto/${params.id}`);
             console.log(res);
             navigate("/");
+            window.location.href = "http://localhost:3001/productos";
         }
         borrar();
     },[navigate, params.id]);

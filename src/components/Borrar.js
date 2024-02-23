@@ -10,6 +10,7 @@ export function BorrarUsuario(){
             const res= await axios.get(`http://localhost:3000/api/borrarUsuario/${params.id}`);
             console.log(res);
             navigate("/");
+            window.location.href = "http://localhost:3001";
         }
         borrar();
     },[navigate, params.id]);
