@@ -18,15 +18,9 @@ export function Menu(){
                 <a className="nav-link active" aria-current="page" href="/Nuevo">Nuevo Usuario</a>
                 </li>
                 <li className="nav-item">
-<<<<<<< HEAD
                 <a className="nav-link active" aria-current="page" href="/nuevoproducto">Nuevo producto</a>
                 </li>
-                <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/borrarUsuario">Borrar Usuario</a>
-=======
-                <a className="nav-link active" aria-current="page" href="/NuevoProducto">Nuevo producto</a>
->>>>>>> 3a8126f0a72466715450b700876f716524822577
-                </li>
+            
             </ul>
             <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
